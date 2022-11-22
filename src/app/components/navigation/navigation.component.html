@@ -1,8 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [mode]="(isHandset$ | async) ? 'over' : 'side'">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Link 1</a>
@@ -10,8 +9,8 @@
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
+  <mat-sidenav-content class="inner">
+    <mat-toolbar color="primary" class="bottomNav">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -23,6 +22,5 @@
       <span>Social Warrior - helpR</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <button mat-button type="button" color="primary">Test</button>
   </mat-sidenav-content>
 </mat-sidenav-container>
