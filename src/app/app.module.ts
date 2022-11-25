@@ -12,15 +12,25 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './components/map/map.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { OrgsComponent } from './components/orgs/orgs.component';
+
+import { GoogleMapsModule } from '@angular/google-maps';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     MapComponent,
-    SettingsComponent
+    SettingsComponent,
+    OrgsComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     LayoutModule,
     MatToolbarModule,
@@ -28,7 +38,12 @@ import { SettingsComponent } from './components/settings/settings.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    GoogleMapsModule,
+    CommonModule,
+    HttpClientJsonpModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
