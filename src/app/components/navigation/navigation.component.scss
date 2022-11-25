@@ -1,0 +1,33 @@
+@use '/node_modules/material-bottom-nav/bottom-nav.scss' as bottom-nav;
+
+.bottom-nav {
+  @include bottom-nav.root(
+    $background-color: #009688,
+    $active-color: #ffffff,
+    $inactive-color: #E0E0E0
+  );
+
+  /* @include bottom-nav.horizontal(); */
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.icon-display {
+  transform: scale(1.2);
+}
