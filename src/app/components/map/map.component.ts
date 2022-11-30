@@ -79,8 +79,6 @@ export class MapComponent implements OnInit {
       title: 'Request help'
     };
 
-    this.dialog.open(DialogComponent, dialogConfig);
-
     const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(
