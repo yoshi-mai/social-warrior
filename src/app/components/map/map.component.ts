@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, timeout } from 'rxjs/operators';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogConfig} from '@angular/material/dialog';
@@ -70,8 +70,6 @@ export class MapComponent implements OnInit {
 
   openDialog() {
 
-    console.log("test");
-
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.autoFocus = true;
@@ -79,11 +77,13 @@ export class MapComponent implements OnInit {
       title: 'Request help'
     };
 
-    const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
+    const dialogRef = setTimeout(() => {
+      this.dialog.open(DialogComponent, dialogConfig);
+    }, 800);
 
-    dialogRef.afterClosed().subscribe(
+   /*  dialogRef.afterClosed().subscribe(
       data => console.log("Dialog output:", data)
-  );    
+  );     */
 
   }
 }
