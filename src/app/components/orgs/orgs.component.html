@@ -1,1 +1,31 @@
-<p>orgs works!</p>
+<mat-toolbar class="toolbar">Listed organisations</mat-toolbar>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let org"> {{org.name}} </td>
+    </ng-container>
+  
+    <!-- Contact Column -->
+    <ng-container matColumnDef="contact">
+      <th mat-header-cell *matHeaderCellDef> Contact </th>
+      <td mat-cell *matCellDef="let org"> {{org.contact}} </td>
+    </ng-container>
+  
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> City </th>
+      <td mat-cell *matCellDef="let org"> {{org.city}} </td>
+    </ng-container>
+  
+    <!-- Country Column -->
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef> Country </th>
+      <td mat-cell *matCellDef="let org"> {{org.country}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  

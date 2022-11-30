@@ -19,6 +19,20 @@ import { OrgsComponent } from './components/orgs/orgs.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { IntroComponent } from './components/intro/intro.component';
+
+import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+
+import { DialogComponent } from './components/dialog/dialog.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -27,7 +41,9 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
     NavigationComponent,
     MapComponent,
     SettingsComponent,
-    OrgsComponent
+    OrgsComponent,
+    IntroComponent,
+    DialogComponent
   ],
   imports: [
     AppRoutingModule,
@@ -43,9 +59,19 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
     GoogleMapsModule,
     CommonModule,
     HttpClientJsonpModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatDialogModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatSliderModule,
+    MatSlideToggleModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule { }
