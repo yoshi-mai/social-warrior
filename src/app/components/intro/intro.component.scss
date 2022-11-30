@@ -5,11 +5,11 @@ body {
 }
 
 #border {
-    background:#0F7391;
+    background:#ffffff;
     margin: auto;
     width: 1000px;
     height: 1000px;
-    border: solid 3px #0F7391;
+    border: solid 3px #ffffff;
     border-radius:10px 25%;
 }
 
@@ -44,7 +44,7 @@ body {
     -o-transform:rotate(180deg);
     -moz-transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
-    color:#ffffff;
+    color:#0F7391;
 }
 
 #load div:nth-child(2) {
