@@ -9,9 +9,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class SettingsComponent {
   disabled = false;
   max = 100;
-  min = 0;
+  min = 1;
   showTicks = false;
-  step = 1;
+  step = 0.5;
   thumbLabel = false;
   value = 0;
 

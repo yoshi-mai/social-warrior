@@ -10,36 +10,29 @@
 .headline {
     font-size: medium;
     background-color: #ffffff;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-.slider {
-    width: 80%;
-}
-
-.slider-text {
-  color:#0F7391;
-}
-
-.example-margin {
+.example-margin.size {
   margin: 8px;
   padding-bottom: 30px;
 }
 
 .example-result-card {
   margin: 10px;
+  margin-bottom: 30px;
+}
+
+.example-result-card.first {
+  margin-top: 30px;
 }
 
 label {
   font-family: Roboto;
 }
 
-.example-margin {
-  margin: 10px;
-}
-
-.saveButton {
-  margin-top: 50px;
+.saveButton.size {
+  margin-top: 10px;
   margin-left: 25%;
   padding:30px;
   width: 50%!important;
@@ -47,21 +40,7 @@ label {
   
 }
 
-::ng-deep {
-    .mat-slider-thumb-label {
-      transform: rotate(45deg) !important;
-      border-radius: 50% 50% 0 !important;
-    }  
-    .mat-slider-thumb {
-      transform: scale(0) !important;
-    }  
-    .mat-slider-thumb-label-text {
-      opacity: 1 !important;
-    }
-  }
-
-
-  .mat-mdc-slider.mat-primary {
+.mat-mdc-slider.mat-primary {
     --mdc-slider-handle-color: #0F7391;
     --mdc-slider-focus-handle-color: #0F7391;
     --mdc-slider-hover-handle-color: #0F7391;
@@ -86,4 +65,16 @@ label {
   --mdc-switch-selected-hover-track-color: #0f739154;
   --mdc-switch-selected-pressed-track-color: #0f739154;
   --mdc-switch-selected-track-color: #0f739154;
+}
+
+.example-margin.slider.size {
+  width: 80%;
+}
+
+.card-content.size.top {
+  padding-top: 0px;
+}
+
+.headline.padding.left {
+  padding-left: 0px;
 }

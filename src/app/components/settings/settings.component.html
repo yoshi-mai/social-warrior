@@ -1,7 +1,7 @@
 <mat-toolbar class="toolbar">User Settings</mat-toolbar>
 <form>
 
-    <mat-card class="example-result-card">
+    <mat-card class="example-result-card first">
         <mat-toolbar class="headline">Help Categories</mat-toolbar>
         <mat-form-field class="select">
             <mat-label>Select your categories you want to help</mat-label>
@@ -13,32 +13,30 @@
 
     
     <mat-card class="example-result-card">
-        <mat-card-content>
-            <mat-toolbar class="headline">Set your radius</mat-toolbar>
-      
-          <div class="example-label-container">
-            
-            <label class="example-value-label">{{value}}</label>
-            <label id="example-name-label" class="example-name-label"> km</label>
-          </div>
-          <mat-slider
-              class="example-margin slider"
-              [disabled]="disabled"
-              [max]="max"
-              [min]="min"
-              [step]="step"
-              [discrete]="thumbLabel"
-              [showTickMarks]="showTicks">
-            <input matSliderThumb [(ngModel)]="value" name="radius">
-          </mat-slider>
+        <mat-card-content class="card-content size top">
+            <mat-toolbar class="headline padding left">Set your radius</mat-toolbar>
+            <div class="example-label-container">
+                <label class="example-value-label">{{value}}</label>
+                <label id="example-name-label" class="example-name-label"> km</label>
+            </div>
+            <mat-slider
+                class="example-margin slider size"
+                [disabled]="disabled"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [discrete]="thumbLabel"
+                [showTickMarks]="showTicks">
+                <input matSliderThumb [(ngModel)]="value" name="radius" class="slider">
+            </mat-slider>
         </mat-card-content>
-      </mat-card>
+    </mat-card>
 
     
     <mat-card class="example-result-card">
         <mat-toolbar class="headline">Toggle notifications</mat-toolbar>
         <mat-slide-toggle
-            class="example-margin"
+            class="example-margin size"
             color="primary"
             checked="checked">
             Notifications
@@ -46,6 +44,6 @@
     </mat-card>
 
     <div>
-        <button mat-raised-button color="primary" class="saveButton">Save Settings</button>
+        <button mat-raised-button color="primary" class="saveButton size">Save Settings</button>
     </div>
 </form>
