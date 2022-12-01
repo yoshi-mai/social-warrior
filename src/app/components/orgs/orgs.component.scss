@@ -2,3 +2,50 @@
     margin-bottom: 6px;
     margin-top: 6px;
 }
+
+.card-header {
+    font-size: medium;
+    background-color: rgba($color: #F5F5F5, $alpha: 0.7);
+    /* background-color: rgba($color: #0F7391, $alpha: 0.3); */
+}
+
+.example-card {
+    margin: 10px;
+    font-family: Roboto;
+    font-size: medium;
+}
+
+mat-card-title {
+    color: #0F7391;
+}
+
+mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba($color: #0F7391, $alpha: 1.0), 
+                0 1px 1px 0 rgba($color: #0F7391, $alpha: 1.0), 
+                0 1px 3px 0 rgba($color: #0F7391, $alpha: 1.0);
+}
+
+.right-button {
+    text-align: right;
+    margin-left: 200px;
+}
+
+.date {
+    width: 50%;
+    text-align: left;
+    margin-right: 40%;
+}
+
+.distance {
+    text-align: right;
+    margin-left: 50px;
+    
+}
+
+mat-icon {
+    color: #0F7391;
+}
+
+.time {
+    text-align: right;
+}

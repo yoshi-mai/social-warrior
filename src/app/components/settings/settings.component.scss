@@ -14,7 +14,24 @@
 }
 
 .slider {
-    width: 60%;
+    width: 80%;
+}
+
+.slider-text {
+  color:#0F7391;
+}
+
+.example-margin {
+  margin: 8px;
+  padding-bottom: 30px;
+}
+
+.example-result-card {
+  margin: 10px;
+}
+
+label {
+  font-family: Roboto;
 }
 
 .example-margin {
@@ -26,6 +43,7 @@
   margin-left: 25%;
   padding:30px;
   width: 50%!important;
+  background-color: #0F7391!important;
   
 }
 
