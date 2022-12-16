@@ -15,5 +15,5 @@ export class SettingsComponent {
   thumbLabel = false;
   value = 0;
 
-  public options: string[] = ['Medical Aid', 'Shelter', 'Food', 'Drink', 'Police'];
+  public options: string[] = ['Medical Aid', 'Shelter', 'Food', 'Drink', 'Police', 'Shelter'];
 }

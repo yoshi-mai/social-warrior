@@ -1,6 +1,6 @@
 <h2 mat-dialog-title></h2>
 
-<mat-dialog-content>
+<mat-dialog-content *ngIf="!sendClicked">
   <h2>{{title}}</h2>
   <form [formGroup]="form">
         <mat-form-field>
@@ -15,8 +15,14 @@
         </mat-form-field>
     </form>
 </mat-dialog-content>
+<mat-dialog-content *ngIf="sendClicked">
+    <h2>You are the change!</h2>
+    <p>Thank you for helping people in need!</p>
+    <img src="https://i.pinimg.com/originals/1c/88/83/1c8883a1768f2f77caf0371d49a68dc2.gif" class="rocket">
+</mat-dialog-content>
 
 <mat-dialog-actions>
-    <button mat-raised-button color="primary" (click)="close()">Dismiss</button>
-    <button mat-raised-button color="primary" (click)="save()">Send</button>
+    <button *ngIf="!sendClicked" mat-raised-button color="primary" (click)="close()">Dismiss</button>
+    <button *ngIf="!sendClicked" mat-raised-button color="primary" (click)="save()">Send</button>
+    <button *ngIf="sendClicked" mat-raised-button color="primary" (click)="close()">Let's gooo</button>
 </mat-dialog-actions>

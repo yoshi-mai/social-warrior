@@ -7,17 +7,21 @@ import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
 
-  public options: string[] = ['Medical Aid', 'Shelter', 'Food', 'Drink', 'Police'];
+  public options: string[] = ['Medical Aid', 'Shelter', 'Food', 'Drink',  'Clothes', 'Police'];
 
   form: FormGroup;
   title: string;
 
+  sendClicked: boolean;
+
+
   constructor(private fb: FormBuilder, private dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) data: any) {
     this.title = data.title;  
+    this.sendClicked = false;
 
     this.form = this.fb.group({
       category: this.fb.control('', Validators.required),
@@ -34,7 +38,8 @@ export class DialogComponent implements OnInit {
   }
 
   save() {
-    this.dialogRef.close(this.form.value);
+    /* this.dialogRef.close(this.form.value); */
+    this.sendClicked = true;
   }
 
 }

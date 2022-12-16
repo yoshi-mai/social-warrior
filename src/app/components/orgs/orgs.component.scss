@@ -1,10 +1,15 @@
 .toolbar {
     margin-bottom: 6px;
     margin-top: 6px;
+
+    background-color: rgba($color: #0F7391, $alpha: 1.0);
+    color: #ffffff;
+    position: sticky;
 }
 
 .container {
     background-color: rgba($color: white, $alpha: 0.3);
+    height: 85%;
 }
 
 .card-header {
